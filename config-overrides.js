@@ -1,6 +1,7 @@
 const {
   override,
-  useBabelRc
+  addBabelPlugin
+  // useBabelRc
   // addDecoratorsLegacy,
   // disableEsLint,
   // addBundleVisualizer,
@@ -9,4 +10,6 @@ const {
 } = require("customize-cra");
 // const path = require("path");
 
-module.exports = override(useBabelRc());
+module.exports = override(
+  addBabelPlugin("@babel/plugin-proposal-optional-chaining")
+);
